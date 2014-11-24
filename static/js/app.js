@@ -34,7 +34,7 @@ angular.module('ToDoApp', [])
             $scope.inserting = true;
             $http.post(tasksUrl, task)
                 .success(function(data) {
-                    $scope.newTask.rowid = data.rowid
+                    $scope.newTask.rowid = data.rowid;
                     $scope.tasks.push($scope.newTask);
                     $scope.newTask = {done: false};
                     $scope.errorMessage = null;
